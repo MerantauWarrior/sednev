@@ -1,16 +1,16 @@
 <?php
 /* HTML E-mail sending */
 if($_SERVER['REQUEST_METHOD']== 'POST'){
-	if(isset($_POST['nameUser']) && !empty($_POST['nameUser']) && isset($_POST['telUser']) && !empty($_POST['telUser']) && isset($_POST['emailUser']) && !empty($_POST['emailUser']) && isset($_POST['messageUser']) && !empty($_POST['messageUser'])){
-		$to      = 'sheeff2008@gmail.com, boris117@yandex.ru';
-		$subj 	= 'Письмо от TAXI';
+	if(isset($_POST['nameUser']) && !empty($_POST['nameUser']) && isset($_POST['emailUser']) && !empty($_POST['emailUser']) && isset($_POST['messageUser']) && !empty($_POST['messageUser'])){
+		$to      = 'boris117@yandex.ru';
+		$subj 	= 'Вопрос с сайта';
 		$from	= $_POST['nameUser'];
 		$email = $_POST['emailUser'];
 		$tel = $_POST['telUser'];
 		$message	= wordwrap($_POST['messageUser'], 70);
 		$headers = 'From: '.$email. "\r\n" .
 						'To: Mr.Client <'.$to.'>' . "\r\n" .
-							 'Reply-To: anyone@gmail.com' . "\r\n" .
+							 'Reply-To: '.$to.'' . "\r\n" .
 							 'X-Mailer: PHP/' . phpversion();
 		$headers  .= 'MIME-Version: 1.0' . "\r\n";
 		$headers .= 'Content-type: text/html; charset=utf-8' . "\r\n";

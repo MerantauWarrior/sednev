@@ -1,5 +1,69 @@
 @media (min-width: 320px) and (max-width: 767px){
-	
+	.mobmenu{display: block;}
+	.menu{display: none;margin-top: 15px;}
+	.navigation{padding: 4px 0;}
+	.question__form-inp{
+		width: 100%;
+	}
+	.question__title{text-align: center;}
+	.question, .contacts-info{border: none;}
+	.question__form-label{
+		width: 100%;
+		margin-bottom: 10px;
+		text-align: left;
+	}
+	.question__form-label span{
+		top: 9px;
+	}
+	.contacts-ico{display: none;}
+	.contacts-info {
+		float: none;
+    padding: 0 35px;
+	}
+	.footer__logo {
+    margin: 70px auto 40px auto;
+	}
+	.contacts{float: none;}
+	.benefits__item{
+		width: 100%;
+		margin: 0 0 15px 0;
+	}
+	.benefits{padding: 50px 15px;}
+	.details__item{
+		width: 100%;
+		padding-right: 0;
+		margin-bottom: 40px;
+		text-align: center;
+	}
+	.details-ico{
+		float: none;
+		display: inline-block;
+		margin-bottom: 10px;
+		margin-right: 0;
+	}
+	.details-text{overflow: auto;}
+	.details-text__description{text-align: left;}
+	.details{padding: 40px 15px 0 15px;}
+	.about {
+    padding: 55px 15px 40px 15px;
+    border-bottom: 3px solid #ffffff;
+	}
+	.about-block{width: 100%;}
+	.header__controls {
+    position: relative;
+    top: auto;
+    right: auto;
+    width: 100%;
+    margin-top: 10px;
+    text-align: center;
+	}
+	.header__order-call {
+    margin: 0 auto;
+	}
+	.header{padding: 30px 15px;}
+	.navigation{text-align: left;}
+	.menu__item{float: none;margin-bottom: 10px;}
+	.menu__item:after{display: none;}
 }
 
 @media (min-width: 320px) and (max-width: 767px) and (orientation: portrait){
