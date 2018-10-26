@@ -46,6 +46,40 @@ $( document ).ready(function() {
 			});
 		}
 	});
-	/**/
+	/*modal*/
+	$('.header__order-call').click(function(){
+		$('.modal').show();
+	});
+	$('.modal-close').click(function(){
+		$('.modal').hide();
+	});
+	/*Ajax call order  mail*/
+	$('button.modal-call__submit').click(function(e){
+		e.preventDefault();
+		var nameUser = $('#modalName').val();
+		var telUser = $('#modalTel').val();
+		if(nameUser === "" && telUser === ""){
+			$('<small>заполните обязательные поля</small>').appendTo('.modal-call__res').delay(2000).fadeOut(600);
+			return false;
+		}else{
+			$.ajax({
+				type : 'POST',
+				url : 'mailHandler-modal.php',
+				async : true,
+				data : {
+					nameUser:nameUser,
+					telUser:telUser
+					},
+				error: function() {
+				 $( "body" ).html( 'fail' );
+				},
+				success: function(data){
+					$('#modalName').val('');
+					$('#modalTel').val('');
+					$('<small>Сообщение отправлено</small>').appendTo('.modal-call__res').delay(2000).fadeOut(600);
+				}
+			});
+		}
+	});
 	
 });

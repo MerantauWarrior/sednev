@@ -1,4 +1,5 @@
 @media (min-width: 320px) and (max-width: 767px){
+	.msgRes{width: 100%;}
 	.mobmenu{display: block;}
 	.menu{display: none;margin-top: 15px;}
 	.navigation{padding: 4px 0;}
